@@ -3,81 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register for JAMB Online Classes</title>
+    <title>Register - JAMB Online Classes</title>
     <style>
         /* Base Styles */
         body {
-            font-family: Cambria, Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background: linear-gradient(135deg, #ff9e55, #ffb785);
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        header, footer {
-            background-color: #ff9e55;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
+        .container {
             background-color: #fff;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
         }
-        h1, h2, p {
-            margin: 20px 0;
+        h1 {
+            text-align: center;
+            color: #375b26;
         }
-        form label {
-            display: block;
-            margin-bottom: 5px;
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
             font-weight: bold;
         }
-        form input, form button {
-            width: 100%;
+        input[type="text"], input[type="email"], input[type="tel"] {
             padding: 10px;
-            margin: 10px 0;
+            margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
-        form button {
-            background-color: #ff9e55;
+        .checkbox-label {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-label input {
+            margin-right: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #375b26;
             color: #fff;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
         }
-        form button:hover {
-            background-color: #e88d42;
-            animation: breathin 0.8s 1 ;
+        button:hover {
+            background-color: #2e4b1e;
         }
-        @keyframes breathin {
-            50%{
-                transform: scale(0.8);
-            }
-        } 
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Register for JAMB Online Classes</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about-us.html">About Us</a>
-            <a href="Contact_us.html">Contact Us</a>
-        </nav>
-    </header>
-
-    <main>
-        <h2>Join the Science Elite!</h2>
-        <p>To join our classes, please fill out the form below and pay the ₦5000 class fee.</p>
-        <form id="joinForm">
+    <div class="container">
+        <h1>Register for JAMB Classes</h1>
+        <form id="registerForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" minlength="3" maxlength="25" required>
 
@@ -87,22 +85,20 @@
             <label for="phone">Phone:</label>
             <input type="tel" id="phone" name="phone" minlength="11" maxlength="11" required>
 
-            <label for="firstJambAttempt">Is this your first JAMB attempt?</label>
-            <input type="checkbox" id="firstJambAttempt" name="firstJambAttempt">
+            <div class="checkbox-label">
+                <input type="checkbox" name="question" id="checkbox">
+                <label for="checkbox"><strong>Is this your first JAMB attempt?</strong></label>
+            </div>
 
             <button type="submit">Submit</button>
         </form>
-    </main>
-
-    <footer>
-        <p>Contact us: <a href="https://wa.link/holiam" style="color:#fff;">Whatsapp: 09130548567</a> or email at olatunjisegunmarvelee@gmail.com</p>
-    </footer>
+    </div>
 
     <script>
-        document.getElementById('joinForm').addEventListener('submit', function(event) {
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            alert('Account created successfully! Please proceed to payment.');
-            window.location.href = 'payment.html';
+            alert('Account created! Please proceed to payment.');
+            // Optionally, redirect to a payment page or handle payment logic here
         });
     </script>
 </body>
