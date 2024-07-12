@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment for JAMB Online Classes</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #ff9e55;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1, h2, p {
+            margin: 20px 0;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #ff9e55;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #e88d42;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Payment for JAMB Online Classes</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Complete Your Payment</h2>
+        <p>To complete your registration, please provide your payment details below.</p>
+        <form id="paymentForm">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" minlength="16" maxlength="16" required>
+
+            <label for="cardName">Cardholder Name:</label>
+            <input type="text" id="cardName" name="cardName" required>
+
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" minlength="3" maxlength="4" required>
+
+            <button type="submit">Submit Payment</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Contact us: <a href="https://wa.link/holiam" style="color:#fff;">Whatsapp: 09130548567</a> or email at olatunjisegunmarvelee@gmail.com</p>
+    </footer>
+
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Payment successful! Welcome to the JAMB Online Classes.');
+            window.location.href = 'home.html';
+        });
+    </script>
+</body>
+</html>
