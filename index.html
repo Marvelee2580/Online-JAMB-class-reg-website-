@@ -76,6 +76,11 @@
 			border-radius: 10px;
 			display: block;
 		}
+		.testimonial-item img {
+			max-width: 100%;
+			border-radius: 50%;
+			margin-bottom: 10px;
+		}
 
 		footer p {
 			margin: 0;
@@ -93,6 +98,34 @@
 				flex: 1 1 100%;
 			}
 		}
+		/* Button Styles */
+.join-button {
+    display: block;
+    width: 200px;
+    padding: 12px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 30px;
+    position: sticky ;
+    bottom: 20px;
+    left: calc(50% - 120px); /* Center horizontally */
+    z-index: 1000; /* Ensure it's above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    animation: animate 1s infinite linear ;
+}
+ @keyframes animate{
+ 	50%{transform: scale(0.96);
+ 	}
+ } 
+
+.join-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-5px); /* Move up slightly on hover */
+}
 
 		/* Sidebar Styles */
 		.sidebar {
@@ -117,7 +150,7 @@
 			transition: 0.3s;
 		}
 
-		.sidebar a:hover {
+		.sidebar a:active {
 			background-color: #32a852;
 			/* Green color on hover */
 		}
@@ -137,7 +170,7 @@
 			padding: 6px 15px;
 			border: none;
 			position: absolute;
-			left: 6px;
+			left: 3px;
 			top: 12.0px;
 		}
 
@@ -146,7 +179,9 @@
 		}
 		.student-testimonials{
 			font-family: Georgia, 'Times New Roman', Times, serif;
-			color: red;
+			color: darkorange;
+			text-align: center ;
+			font-size: 30px ;
 		}
 	</style>
 </head>
@@ -155,12 +190,7 @@
 	<header>
 		<div class="openbtn" onclick="openNav()">☰</div>
 		<h1>NOVA ACADEMY OF EXCELLENCE</h1>
-		<nav>
-			<a href="index.html">Home</a>
-			<a href="about-us.html">About Us</a>
-			<a href="register.html">Join Our Class</a>
-			<a href="Contact_us.html">Contact Us</a>
-		</nav>
+
 	</header>
 
 	<div id="mySidebar" class="sidebar">
@@ -193,7 +223,7 @@
 			</div>
 		</section>
 						<div class="student-testimonials">
-							<p>See what our students are saying about us...</p>
+							<p>Student Testimonials</p>
 						</div>
 		<section class="testimonial">
 			<div class="testimonial-item">
@@ -217,6 +247,8 @@
 				<p>"The comprehensive coverage of topics and the support from tutors gave me the confidence to excel in my exams."</p>
 			</div>
 		</section>
+		<!-- Jiggling Button -->
+        <a href="register.html" class="join-button">Join Class Now</a>
 	</main>
 
 	<footer>
@@ -238,11 +270,11 @@
 			const greetingMessage = document.getElementById('greetingMessage');
 
 			if (hours < 12) {
-				greetingMessage.textContent = 'Good Morning, welcome to JAMB Online Classes!';
+				greetingMessage.textContent = 'Good Morning, welcome to Nova Academy Of Excellence!';
 			} else if (hours < 18) {
-				greetingMessage.textContent = 'Good Afternoon, welcome to JAMB Online Classes!';
+				greetingMessage.textContent = 'Good Afternoon, welcome to Nova Academy Of Excellence!';
 			} else {
-				greetingMessage.textContent = 'Good Evening, welcome to JAMB Online Classes!';
+				greetingMessage.textContent = 'Good Evening, welcome to Nova Academy Of Excellence!';
 			}
 
 			// Change color every 4 seconds
@@ -258,4 +290,4 @@
 	</script>
 </body>
 
-                    </html>
+</html>
