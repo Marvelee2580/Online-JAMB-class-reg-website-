@@ -1,83 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JAMB Online Science Classes</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAMB Online Science Classes: Ace Your Exams!</title>
+    <style>
+        /* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f4f8; /* Light blue background for a refreshing look */
+}
+
+a {
+    text-decoration: none;
+    color: #2a9d8f; /* Calming teal color for links */
+    font-weight: bold;
+}
+
+nav a {
+            margin-right: 12px;
+            color: #000000ea;
+        }
+/* Header Styles */
+header {
+    background: linear-gradient(rgba(42, 157, 143, 0.8), rgba(42, 157, 143, 0.8)), url('moon.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeInDown 2s;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    animation: fadeInUp 2s;
+}
+
+.join-btn {
+    padding: 15px 30px;
+    background-color: #e76f51; /* Vibrant orange for the call to action button */
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.join-btn:hover {
+    transform: scale(1.05);
+    
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.why-choose-us, .subjects-covered {
+    background-color: #fff;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-choose-us:hover, .subjects-covered:hover {
+    transform: translateY(-10px);
+}
+
+.why-choose-us h2, .subjects-covered h2 {
+    color: #264653; /* Dark blue for headings */
+    margin-bottom: 25px;
+}
+
+/* Call to Action Styles */
+.call-to-action {
+    background-color: #f4a261; /* Soft orange for call to action section */
+    color: white;
+    padding: 40px 20px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #264653; /* Dark blue for footer */
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+    </style>
 </head>
 <body>
-    <div class="clock">
-        <span class="hours">00</span>:
-        <span class="minutes">00</span>:
-        <span class="seconds">00</span>
-    </div>
-    <button id="toggleModeButton" style="
-        padding: 8px 16px;
-        font-size: 14px;
-        font-weight: bold;
-        color: #fff;
-        background-color: #353535b6;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-        transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-    ">Toggle Dark Mode</button>
-
-    <div class="header">
-        <header class="contact-form animated">
+    <header>
+        <div class="hero-image">
+            </div>
+        <div class="hero-content">
             <nav>
-                <a href="home.html">Home</a>
-                <a href="About_us.html">About Us</a>
-                <a href="Contact_us.html">Contact Us</a>
-            </nav>
-            <h1>Welcome to JAMB Online English and Science Classes</h1>
-        </header>
-    </div>
-
-    <div class="content">
-        <div class="class-info">
-            <h2>Why Join Our Classes?</h2>
-            <p>Our JAMB online science classes provide comprehensive coverage of all the key topics you need to excel in your exams. With experienced tutors and a supportive community, you'll be well-prepared to achieve your best score.</p>
+            <a href="myweborigin.html">Join Our JAMB Class</a>
+             <a href="About_us.html">About Us</a>
+             <a href="Contact_us.html" > Contact Us</a>
+            
+        </nav>
+            <h1>Boost Your JAMB Score with Our Online Science Classes</h1>
+            <p>Get personalized preparation and expert guidance to excel in your JAMB science exams.</p>
+            <a href="myweborigin.html" class="join-btn">Join the Class Now</a>
         </div>
+    </header>
 
-        <div class="join-class">
-            <h2 class="contact-form animated" style="color: #375b26">JAMB Success Starts Here – Join the Science Elite!</h2>
-            <p>To join our classes, please fill out the form below and pay the ₦5000 class fee.</p>
-            <form id="joinForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" minlength="3" maxlength="25" required>
+    <section class="why-choose-us">
+        <h2>Why Choose Our JAMB Science Classes?</h2>
+        <p>Our comprehensive online classes provide you with the tools and support you need to succeed in your JAMB exams. Here's what sets us apart:</p>
+        <ul>
+            <li><b>🌟 Experienced and qualified science tutors:</b> Our experienced tutors are not just teachers; they’re mentors who have navigated the JAMB terrain with outstanding results. They bring a wealth of knowledge and insider tips that can transform your preparation strategy.</li><br>
+            <li><b>🚀 Engaging and interactive learning materials:</b> Say goodbye to monotonous lectures. Our classes are interactive, engaging, and filled with animations, quizzes, and live sessions that make learning fun and memorable.</li><br>
+            <li><strong>🌈 Personalized attention and support:</strong> Every student is unique, and we celebrate that. Get personalized attention and support tailored to your learning style and pace.</li><br>
+            <li><b>📈 Proven track record of student success:</b> Our track record speaks volumes. With a high success rate, our students often exceed their own expectations, achieving scores that set them apart.</li><br>
+            <li><b>📘 Comprehensive Coverage: </b>Dive into the depths of Physics, soar through the complexities of Chemistry, unravel the mysteries of Biology, and conquer the challenges of Mathematics and English Language. Our curriculum is meticulously designed to cover every inch of the syllabus</li><br>
+        </ul>
+    </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="email" minlength="8" required>
+    <section class="subjects-covered">
+        <h2>Subjects Covered</h2>
+        <ul>
+            <li>English Language</li>
+            <li>Physics</li>
+            <li>Chemistry</li>
+            <li>Biology</li>
+            <li>Mathematics</li>
+        </ul>
+    </section>
 
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" minlength="11" maxlength="11" required>
-                <div class="checkbox-label">
-                    <input type="checkbox" name="question" id="checkbox" class="checkbox">
-                    <label for="checkbox"><strong>Is this your first JAMB attempt?</strong></label>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+    <section class="call-to-action">
+        <p>Ready to achieve your JAMB science goals? Sign up for our classes today!</p>
+        <a href="myweborigin.html" class="join-btn">Join the Class Now</a>
+    </section>
 
-        <div class="class-info">
-            <h2>English and Science Subjects Covered</h2>
-            <ul>
-                <li>English</li>
-                <li>Physics</li>
-                <li>Chemistry</li>
-                <li>Biology</li>
-                <li>Mathematics</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>Contact us: <a href="https://wa.link/holiam" style="color:red">Whatsapp: 09130548567</a> or email at olatunjisegunmarvelee@gmail.com</p>
-    </div>
-
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; JAMB Science Online Classes. All Rights Reserved.</p>
+    </footer>
 </body>
-  </html>
+</html>
+
