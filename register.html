@@ -4,76 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - JAMB Online Classes</title>
-    <style>
-        /* Base Styles */
-        body {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            background: linear-gradient(135deg, #ff9e55, #ffb785);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
-            width: 100%;
-            animation: fadeIn 1s ease-in-out;
-        }
-        h1 {
-            text-align: center;
-            color: #375b26;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        input[type="text"], input[type="email"], input[type="tel"] {
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .checkbox-label {
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .checkbox-label input {
-            margin-right: 10px;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #375b26;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #2e4b1e;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        #check{
-            accent-color: green
-        } 
-    </style>
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>
     <div class="container">
@@ -97,13 +28,6 @@
         </form>
     </div>
 
-    <script>
-        document.getElementById('registerForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Account created! Please proceed to payment.');
-            // Optionally, redirect to a payment page or handle payment logic here
-            window.location.href = 'payment.html'; 
-        });
-    </script>
+    <script src="register.js"></script>
 </body>
 </html>
