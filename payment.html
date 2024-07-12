@@ -4,7 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment for JAMB Online Classes</title>
-    <link rel="stylesheet" href="payment.css">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #ff9e55;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1, h2, p {
+            margin: 20px 0;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input, form button, form select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #ff9e55;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #e88d42;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,19 +70,38 @@
 
     <main>
         <h2>Complete Your Payment</h2>
-        <p>To complete your registration, please provide your payment details below.</p>
+        <p>To complete your registration, please select your payment method and provide the required details.</p>
         <form id="paymentForm">
-            <label for="cardNumber">Card Number:</label>
-            <input type="text" id="cardNumber" name="cardNumber" minlength="16" maxlength="16" required>
+            <label for="paymentMethod">Select Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" onchange="togglePaymentFields()">
+                <option value="card">Payment by Card</option>
+                <option value="bank">Payment by Bank Transfer</option>
+            </select>
 
-            <label for="cardName">Cardholder Name:</label>
-            <input type="text" id="cardName" name="cardName" required>
+            <div id="cardDetails">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]*" inputmode="numeric" minlength="16" maxlength="16" required>
 
-            <label for="expiryDate">Expiry Date:</label>
-            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                <label for="cardName">Cardholder Name:</label>
+                <input type="text" id="cardName" name="cardName" required>
 
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" minlength="3" maxlength="4" required>
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" pattern="[0-9]*" inputmode="numeric" minlength="3" maxlength="4" required>
+            </div>
+
+            <div id="bankTransferDetails" style="display: none;">
+                <label for="bankName">Bank Name:</label>
+                <input type="text" id="bankName" name="bankName" required>
+
+                <label for="bankEmail">Email Address in Bank:</label>
+                <input type="email" id="bankEmail" name="bankEmail" required>
+
+                <label for="accountName">Name in Bank:</label>
+                <input type="text" id="accountName" name="accountName" required>
+            </div>
 
             <button type="submit">Submit Payment</button>
         </form>
@@ -40,6 +111,32 @@
         <p>Contact us: <a href="https://wa.link/holiam" style="color:#fff;">Whatsapp: 09130548567</a> or email at olatunjisegunmarvelee@gmail.com</p>
     </footer>
 
-    <script src="payment.js"></script>
+    <script>
+        function togglePaymentFields() {
+            var paymentMethod = document.getElementById('paymentMethod').value;
+            var cardDetails = document.getElementById('cardDetails');
+            var bankTransferDetails = document.getElementById('bankTransferDetails');
+
+            if (paymentMethod === 'card') {
+                cardDetails.style.display = 'block';
+                bankTransferDetails.style.display = 'none';
+            } else if (paymentMethod === 'bank') {
+                cardDetails.style.display = 'none';
+                bankTransferDetails.style.display = 'block';
+            }
+        }
+
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var paymentMethod = document.getElementById('paymentMethod').value;
+            
+            if (paymentMethod === 'card') {
+                alert('Payment successful! Welcome to the JAMB Online Classes.');
+            } else if (paymentMethod === 'bank') {
+                alert('Please make a bank transfer to the following details:\n\nAccount Name: Olatunji Segun\nBank Name: Access Bank PLC\nAccount Number: 0123456789\n\nPayment confirmation will be sent to your email.');
+            }
+            window.location.href = 'home.html'; // Redirect to home page
+        });
+    </script>
 </body>
-</html>
+    </html>
