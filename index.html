@@ -3,188 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAMB Online Science Classes: Ace Your Exams!</title>
+    <title>JAMB Online Classes - Home</title>
     <style>
-        /* General Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #e8f4f8; /* Light blue background for a refreshing look */
-}
-
-a {
-    text-decoration: none;
-    color: #2a9d8f; /* Calming teal color for links */
-    font-weight: bold;
-}
-
-nav a {
-            margin-right: 12px;
-            color: #000000ea;
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
         }
-/* Header Styles */
-header {
-    background: linear-gradient(rgba(42, 157, 143, 0.8), rgba(42, 157, 143, 0.8)), url('moon.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 80px 0;
-}
-
-.hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    animation: fadeInDown 2s;
-}
-
-.hero-content p {
-    font-size: 1.3em;
-    margin-bottom: 30px;
-    animation: fadeInUp 2s;
-}
-
-.join-btn {
-    padding: 15px 30px;
-    background-color: #e76f51; /* Vibrant orange for the call to action button */
-    color: white;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out;
-    animation: pulse 2s infinite;
-}
-
-.join-btn:hover {
-    transform: scale(1.05);
-    
-}
-
-/* Section Styles */
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.why-choose-us, .subjects-covered {
-    background-color: #fff;
-    margin: 30px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.why-choose-us:hover, .subjects-covered:hover {
-    transform: translateY(-10px);
-}
-
-.why-choose-us h2, .subjects-covered h2 {
-    color: #264653; /* Dark blue for headings */
-    margin-bottom: 25px;
-}
-
-/* Call to Action Styles */
-.call-to-action {
-    background-color: #f4a261; /* Soft orange for call to action section */
-    color: white;
-    padding: 40px 20px;
-    margin: 30px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* Footer Styles */
-footer {
-    background-color: #264653; /* Dark blue for footer */
-    color: white;
-    text-align: center;
-    padding: 25px 0;
-}
-
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
+        header, footer {
+            background-color: #ff9e55;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, p {
+            margin: 20px 0;
+        }
+        .banner {
+            background: url('img.png') no-repeat center center/cover;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            
+        }
+        .banner p {
+            font-size: 1.2em;
+        }
+        .features, .testimonial {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .feature, .testimonial-item {
+            flex: 1 1 calc(33% - 40px);
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .feature img, .testimonial-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        footer p {
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .features, .testimonial {
+                flex-direction: column;
+            }
+            .feature, .testimonial-item {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="hero-image">
-            </div>
-        <div class="hero-content">
-            <nav>
-            <a href="register.html">Join Our JAMB Class</a>
-             <a href="about-us.html">About Us</a>
-             <a href="Contact_us.html" > Contact Us</a>
-            
+        <h1>JAMB Online Classes</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="join.html">Join Our Class</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
-            <h1>Boost Your JAMB Score with Our Online Science Classes</h1>
-            <p>Get personalized preparation and expert guidance to excel in your JAMB science exams.</p>
-            <a href="register.html" class="join-btn">Join the Class Now</a>
-        </div>
     </header>
 
-    <section class="why-choose-us">
-        <h2>Why Choose Our JAMB Science Classes?</h2>
-        <p>Our comprehensive online classes provide you with the tools and support you need to succeed in your JAMB exams. Here's what sets us apart:</p>
-        <ul>
-            <li><b>🌟 Experienced and qualified science tutors:</b> Our experienced tutors are not just teachers; they’re mentors who have navigated the JAMB terrain with outstanding results. They bring a wealth of knowledge and insider tips that can transform your preparation strategy.</li><br>
-            <li><b>🚀 Engaging and interactive learning materials:</b> Say goodbye to monotonous lectures. Our classes are interactive, engaging, and filled with animations, quizzes, and live sessions that make learning fun and memorable.</li><br>
-            <li><strong>🌈 Personalized attention and support:</strong> Every student is unique, and we celebrate that. Get personalized attention and support tailored to your learning style and pace.</li><br>
-            <li><b>📈 Proven track record of student success:</b> Our track record speaks volumes. With a high success rate, our students often exceed their own expectations, achieving scores that set them apart.</li><br>
-            <li><b>📘 Comprehensive Coverage: </b>Dive into the depths of Physics, soar through the complexities of Chemistry, unravel the mysteries of Biology, and conquer the challenges of Mathematics and English Language. Our curriculum is meticulously designed to cover every inch of the syllabus</li><br>
-        </ul>
-    </section>
+    <main>
+        <section class="banner">
+            <h1>Welcome to JAMB Online Classes</h1>
+            <p>Excel in your JAMB exams with our expert tutors and comprehensive resources.</p>
+        </section>
+        <section class="features">
+            <div class="feature">
+                <img src="feature1.jpg" alt="Experienced Tutors">
+                <h2>Experienced Tutors</h2>
+                <p>Learn from the best in the industry with years of experience in guiding students to success.</p>
+            </div>
+            <div class="feature">
+                <img src="feature2.jpg" alt="Comprehensive Coverage">
+                <h2>Comprehensive Coverage</h2>
+                <p>Get in-depth knowledge of all key topics to ensure you are well-prepared for your exams.</p>
+            </div>
+            <div class="feature">
+                <img src="feature3.jpg" alt="Interactive Lessons">
+                <h2>Interactive Lessons</h2>
+                <p>Engage with interactive content and real-time feedback to enhance your learning experience.</p>
+            </div>
+        </section>
 
-    <section class="subjects-covered">
-        <h2>Subjects Covered</h2>
-        <ul>
-            <li>English Language</li>
-            <li>Physics</li>
-            <li>Chemistry</li>
-            <li>Biology</li>
-            <li>Mathematics</li>
-        </ul>
-    </section>
-
-    <section class="call-to-action">
-        <p>Ready to achieve your JAMB science goals? Sign up for our classes today!</p>
-        <a href="register.html" class="join-btn">Join the Class Now</a>
-    </section>
+        <section class="testimonial">
+            <div class="testimonial-item">
+                <img src="student1.jpg" alt="Student Testimonial">
+                <h3>John Doe</h3>
+                <p>"JAMB Online Classes helped me achieve my dream score. The tutors were amazing and the lessons were very thorough."</p>
+            </div>
+            <div class="testimonial-item">
+                <img src="student2.jpg" alt="Student Testimonial">
+                <h3>Jane Smith</h3>
+                <p>"I loved the interactive lessons. They made learning fun and engaging. Highly recommend JAMB Online Classes!"</p>
+            </div>
+            <div class="testimonial-item">
+                <img src="student3.jpg" alt="Student Testimonial">
+                <h3>Michael Johnson</h3>
+                <p>"The comprehensive coverage of topics and the support from tutors gave me the confidence to excel in my exams."</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; JAMB Science Online Classes. All Rights Reserved.</p>
+        <p>© 2024 JAMB Online Classes. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
