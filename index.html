@@ -41,10 +41,6 @@
             text-align: center;
             border-radius: 10px;
         }
-        .banner h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
         .banner p {
             font-size: 1.2em;
         }
@@ -90,8 +86,8 @@
     </header>
 
     <main>
-        <h1>Welcome to JAMB Online Classes</h1>
         <section class="banner">
+            <h1 id="greetingMessage"></h1>
             <p>Excel in your JAMB exams with our expert tutors and comprehensive resources.</p>
         </section>
         <section class="features">
@@ -134,5 +130,23 @@
     <footer>
         <p>© 2024 JAMB Online Classes. All rights reserved.</p>
     </footer>
+
+    <script>
+        function updateGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+            const greetingMessage = document.getElementById('greetingMessage');
+            
+            if (hours < 12) {
+                greetingMessage.textContent = 'Good Morning, welcome to JAMB Online Classes!';
+            } else if (hours < 18) {
+                greetingMessage.textContent = 'Good Afternoon, welcome to JAMB Online Classes!';
+            } else {
+                greetingMessage.textContent = 'Good Evening, welcome to JAMB Online Classes!';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', updateGreeting);
+    </script>
 </body>
-    </html>
+</html>
