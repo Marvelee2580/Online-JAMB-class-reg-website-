@@ -83,7 +83,7 @@
     <main>
         <h1 id="greetingMessage"></h1>
         <section class="banner"></section>
-        <h1 style= "color:green; font-family: Arial; font-size: 17px; font-style: italic; text-align: center;">Why Should you Join Our Class??</h1> 
+        <h1 style="color: green; font-family: Arial; font-size: 17px; font-style: italic; text-align: center;">Why Should you Join Our Class??</h1> 
         <section class="features">
             <div class="feature">
                 <img src="feature1.jpg" alt="Experienced Tutors">
@@ -103,7 +103,7 @@
         </section>
 
         <section class="testimonial">
-            <h1 style= "color: red; text-align: center ;" >Students Testimonials</h1>
+            <h1 style="color: red; text-align: center;">Students Testimonials</h1>
             <div class="testimonial-item">
                 <img src="student1.jpg" alt="Student Testimonial">
                 <h3>John Doe</h3>
@@ -139,6 +139,14 @@
             } else {
                 greetingMessage.textContent = 'Good Evening, welcome to JAMB Online Classes!';
             }
+
+            // Change color every 4 seconds
+            const colors = ['red', 'blue', 'green', 'purple', 'orange'];
+            let colorIndex = 0;
+            setInterval(() => {
+                greetingMessage.style.color = colors[colorIndex];
+                colorIndex = (colorIndex + 1) % colors.length;
+            }, 4000);
         }
         
         document.addEventListener('DOMContentLoaded', updateGreeting);
