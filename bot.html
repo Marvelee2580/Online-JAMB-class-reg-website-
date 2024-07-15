@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAMB Online Classes - FAQ Bot</title>
+	<script src="https://kit.fontawesome.com/ea4bc78125.js" crossorigin="anonymous"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playwrite+CU:wght@100..400&family=Playwrite+HU:wght@100..400&display=swap');
+</style>
+    <link rel="stylesheet" href="bot.css">
+</head>
+
+<body>
+    <header>
+        <h1><i class="fa fa-robot";></i> JAMB Online Classes - FAQ Bot</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="contact_us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="chat-container" id="chatContainer">
+            <!-- Chat messages will be appended here dynamically -->
+        </div>
+
+        <form id="chatForm">
+            <input type="text" id="userInput" placeholder="Ask a question..." autocomplete="off" required>
+            <button type="submit"><i class="fa-regular fa-paper-plane fa-rotate-by fa-2xs" style="color: dimgrey; --fa-rotate-angle: 10deg;""></i></button>
+        </form>
+    </div>
+    
+    <script src="bot.js"></script>
+</body>
+
+</html>
