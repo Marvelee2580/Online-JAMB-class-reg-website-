@@ -104,16 +104,16 @@ const responses = {
         "Materials include quizzes, past questions, and tutor access."
     ],
 	registration: [
-    "✨ Ready to start your journey? Click <a href='index.html' style ='color: green'>here</a> to join our class now!",
-    "🚀 Don't miss out! Sign up for the class <a href='index.html' style ='color: green'>here</a> and start preparing for success!",
-    "📚 Join our community of learners! Click <a href='index.html' style ='color: green'>here</a> to register for the class.",
-    "🌟 Ready to excel? Enroll in our class by clicking <a href='index.html' style ='color: green'>here</a>!",
-    "🎓 Become a part of our learning family! Register <a href='index.html' style ='color: green'>here</a> and get started today.",
-    "📝 Secure your spot in our class! Click <a href='index.html' style ='color: green'>here</a> to sign up now.",
-    "💡 Ready to achieve your goals? Join the class <a href='index.html' style ='color: green'>here</a>!",
-    "📘 Start your preparation journey! Click <a href='index.html' style ='color: green'>here</a> to join the class.",
-    "🌐 Join us and start learning! Register <a href='index.html' style ='color: green'>here</a> and take the first step towards success.",
-    "🔗 Click <a href='index.html' style ='color: green'>here</a> to enroll and get access to all the resources and support you need!"
+    "✨ Ready to start your journey? Click <a href='register.html' style ='color: green'>here</a> to join our class now!",
+    "🚀 Don't miss out! Sign up for the class <a href='register.html' style ='color: green'>here</a> and start preparing for success!",
+    "📚 Join our community of learners! Click <a href='register.html' style ='color: green'>here</a> to register for the class.",
+    "🌟 Ready to excel? Enroll in our class by clicking <a href='register.html' style ='color: green'>here</a>!",
+    "🎓 Become a part of our learning family! Register <a href='register.html' style ='color: green'>here</a> and get started today.",
+    "📝 Secure your spot in our class! Click <a href='register.html' style ='color: green'>here</a> to sign up now.",
+    "💡 Ready to achieve your goals? Join the class <a href='register.html' style ='color: green'>here</a>!",
+    "📘 Start your preparation journey! Click <a href='register.html' style ='color: green'>here</a> to join the class.",
+    "🌐 Join us and start learning! Register <a href='register.html' style ='color: green'>here</a> and take the first step towards success.",
+    "🔗 Click <a href='register.html' style ='color: green'>here</a> to enroll and get access to all the resources and support you need!"
 ],
 	instructors: [
         "Our instructors are experienced professionals in their fields.",
