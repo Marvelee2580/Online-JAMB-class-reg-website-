@@ -1,6 +1,6 @@
 /* Base Styles */
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #ff9e55, #ffb785);
     margin: 0;
     padding: 0;
@@ -21,6 +21,8 @@ body {
 h1 {
     text-align: center;
     color: #375b26;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 form {
     display: flex;
@@ -29,6 +31,11 @@ form {
 label {
     margin-top: 10px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+label i {
+    margin-right: 10px;
 }
 input[type="text"], input[type="email"], input[type="tel"] {
     padding: 10px;
@@ -36,6 +43,15 @@ input[type="text"], input[type="email"], input[type="tel"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    outline: lightgrey 0.5px solid ;
+}
+input:hover{
+	outline: green 1.5px ridge ;
+	animation: fadeIn 3s 1 ;
+}
+
+input::placeholder {
+    color: #aaa;
 }
 .checkbox-label {
     margin-top: 10px;
@@ -44,6 +60,9 @@ input[type="text"], input[type="email"], input[type="tel"] {
 }
 .checkbox-label input {
     margin-right: 10px;
+}
+.g-recaptcha {
+    margin-top: 20px;
 }
 button {
     margin-top: 20px;
@@ -55,6 +74,12 @@ button {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button i {
+    margin-right: 10px;
 }
 button:hover {
     background-color: #2e4b1e;
@@ -63,6 +88,6 @@ button:hover {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-#check {
+#jambAttempt {
     accent-color: green;
-  }
+}
